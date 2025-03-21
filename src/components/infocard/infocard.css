@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* color: white; */
+  transition: 0.5s;
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* box-sizing: border-box;
+  transition: 0.5s; */
+}
+
+.body::before {
+  content: "";
+  background-image: url("../../assets/image5.jpg");
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.25);
+  z-index: -1;
+  border-radius: 50px;
+}
+
+main {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  gap: 15px;
+}
+
+.cards {
+  width: 20%;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards:hover {
+  width: 80%;
+}
+
+.cards .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards:hover .image {
+  transform: scale(1.2);
+}
+
+.cards .backgrounds {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(0.25);
+  opacity: 0;
+}
+
+.cards:hover .backgrounds {
+  opacity: 1;
+}
+
+.cards .layer {
+  width: 100%;
+  height: 50%;
+  margin-top: -250px;
+  position: relative;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.cards .layer .info {
+  width: 260px;
+  position: absolute;
+  bottom: 10px;
+  padding: 20px;
+  opacity: 0;
+}
+
+.cards:hover .layer .info {
+  opacity: 1;
+}
+.cards:hover .layer .info h1{
+    font-size: 22px;
+    font-weight: 600;
+    color: azure;
+}
+
+.info p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 5px;
+}
