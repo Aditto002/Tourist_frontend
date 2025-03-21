@@ -15,7 +15,7 @@ const PlaceManagement = () => {
 
   const fetchPlaces = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/image/galleries");
+      const response = await axios.get("https://explore-aditto.ahadalichowdhury.online/api/image/galleries");
       setPlaces(response.data.data);
     } catch (error) {
       console.error("Error fetching places:", error);
@@ -37,7 +37,7 @@ const PlaceManagement = () => {
 
     try {
       const accessToken = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/admin/place/delete/${placeId}`, {
+      await axios.delete(`https://explore-aditto.ahadalichowdhury.online/api/admin/place/delete/${placeId}`, {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       setPlaces(places.filter((place) => place._id !== placeId));

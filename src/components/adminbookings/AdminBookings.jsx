@@ -20,7 +20,7 @@ const AdminBookings = () => {
         throw new Error('No authentication token found');
       }
 
-      const response = await axios.get('http://localhost:5000/api/admin/bookings', {
+      const response = await axios.get('https://explore-aditto.ahadalichowdhury.online/api/admin/bookings', {
         headers: {
           'Authorization': `Bearer ${accessToken}`,
         },
@@ -42,7 +42,7 @@ const AdminBookings = () => {
   const updateBookingStatus = async (bookingId, status) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/admin/booking/status/${bookingId}`,
+        `https://explore-aditto.ahadalichowdhury.online/api/admin/booking/status/${bookingId}`,
         { status },
         {
           headers: {

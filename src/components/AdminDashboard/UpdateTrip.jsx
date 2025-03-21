@@ -20,7 +20,7 @@ const UpdateTrip = () => {
 
   const fetchTripDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/image/place/${placeId}`);
+      const response = await axios.get(`https://explore-aditto.ahadalichowdhury.online/api/image/place/${placeId}`);
       if (response.data.status === "success") {
         setTrip(response.data.data);
       } else {
@@ -123,7 +123,7 @@ const UpdateTrip = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:5000/api/image/update/${placeId}`,
+        `https://explore-aditto.ahadalichowdhury.online/api/image/update/${placeId}`,
         updatedTrip,
         {
           headers: { 

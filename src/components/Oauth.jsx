@@ -20,7 +20,7 @@ const Oauth = () => {
           photo: result.user.photoURL
          }
         //  console.log(result)
-         const res = await axios.post('http://localhost:5000/api/auth/google',formData);
+         const res = await axios.post('https://explore-aditto.ahadalichowdhury.online/api/auth/google',formData);
         //  const data = await res.json();
          console.log(res)
          localStorage.setItem("token",res?.data?.token)

@@ -11,7 +11,7 @@ const Dashboard = () => {
     const fetchGalleryItems = async () => {
         const accessToken = localStorage.getItem("token");
       try {
-        const response = await axios.get('http://localhost:5000/api/admin/dashboard-stats',
+        const response = await axios.get('https://explore-aditto.ahadalichowdhury.online/api/admin/dashboard-stats',
             {
                 headers: {
                   'Authorization': `Bearer ${accessToken}`

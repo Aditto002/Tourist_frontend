@@ -54,7 +54,7 @@ const ReminderForm = () => {
       const accessToken = localStorage.getItem("token");
 
       const response = await axios.post(
-        'http://localhost:5000/api/reminders/create',
+        'https://explore-aditto.ahadalichowdhury.online/api/reminders/create',
         {
           userId: userId, // Include userId in the request
           email: formData.email,

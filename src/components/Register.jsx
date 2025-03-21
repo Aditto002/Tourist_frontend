@@ -64,7 +64,7 @@ const Register = () => {
         password: password,
         email: email,
       };
-      const res = await axios.post("http://localhost:5000/api/auth/signup", formData);
+      const res = await axios.post("https://explore-aditto.ahadalichowdhury.online/api/auth/signup", formData);
       console.log(res);
       console.log("  hello")
       

@@ -15,7 +15,7 @@ const UserManagement = () => {
   const fetchUsers = async () => {
     try {
         const accessToken = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/admin/users",
+      const response = await axios.get("https://explore-aditto.ahadalichowdhury.online/api/admin/users",
         {
             headers: {
               'Authorization': `Bearer ${accessToken}`
@@ -40,7 +40,7 @@ const UserManagement = () => {
 
     try {
         const accessToken = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/admin/user/delete/${userId}`,
+      await axios.delete(`https://explore-aditto.ahadalichowdhury.online/api/admin/user/delete/${userId}`,
         {
             headers: {
               'Authorization': `Bearer ${accessToken}`

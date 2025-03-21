@@ -51,7 +51,7 @@ export default function AdminLogin() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/admin/signin", data);
+      const response = await axios.post("https://explore-aditto.ahadalichowdhury.online/api/admin/signin", data);
 
       localStorage.setItem("token", response?.data?.data?.token);
       navigate("/dashboard");

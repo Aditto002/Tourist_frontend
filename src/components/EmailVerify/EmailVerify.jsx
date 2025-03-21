@@ -9,7 +9,7 @@ const EmailVerify = () => {
 		const verifyEmailUrl = async () => {
             const token = localStorage.getItem("token");
 			try {
-				const url = `http://localhost:5000/api/auth/verify/${token}`;
+				const url = `https://explore-aditto.ahadalichowdhury.online/api/auth/verify/${token}`;
 				const { data } = await axios.get(url);
 				console.log(data);
 				setValidUrl(true);

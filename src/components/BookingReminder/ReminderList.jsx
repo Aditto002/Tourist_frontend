@@ -17,7 +17,7 @@ const ReminderList = () => {
   const fetchReminders = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get('http://localhost:5000/api/reminders/user-reminders', {
+      const response = await axios.get('https://explore-aditto.ahadalichowdhury.online/api/reminders/user-reminders', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -40,7 +40,7 @@ const ReminderList = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/reminders/delete/${id}`, {
+      await axios.delete(`https://explore-aditto.ahadalichowdhury.online/api/reminders/delete/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -89,7 +89,7 @@ const ReminderList = () => {
       const token = localStorage.getItem("token");
       const dateTime = new Date(`${editForm.reminderDate}T${editForm.reminderTime}`);
 
-      await axios.put(`http://localhost:5000/api/reminders/update/${id}`, {
+      await axios.put(`https://explore-aditto.ahadalichowdhury.online/api/reminders/update/${id}`, {
         message: editForm.message,
         reminderDate: dateTime.toISOString()
       }, {

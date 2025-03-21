@@ -38,7 +38,7 @@ const PaymentPage = () => {
 //         setLoading(true);
         
 //         // Get booking details (you'll need to implement this endpoint)
-//         const bookingResponse = await axios.get(`http://localhost:5000/api/bookings/${id}`, {
+//         const bookingResponse = await axios.get(`https://explore-aditto.ahadalichowdhury.online/api/bookings/${id}`, {
 //           withCredentials: true,
 //           headers: {
 //             'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -46,7 +46,7 @@ const PaymentPage = () => {
 //         });
         
 //         // Get payment status
-//         const paymentResponse = await axios.get(`http://localhost:5000/api/payment/status/${id}`, {
+//         const paymentResponse = await axios.get(`https://explore-aditto.ahadalichowdhury.online/api/payment/status/${id}`, {
 //           withCredentials: true,
 //           headers: {
 //             'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -76,7 +76,7 @@ useEffect(() => {
             
             // Updated API endpoint
             const bookingResponse = await axios.get(
-                `http://localhost:5000/api/payment/booking/${id}`, 
+                `https://explore-aditto.ahadalichowdhury.online/api/payment/booking/${id}`, 
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -85,7 +85,7 @@ useEffect(() => {
             );
             
             const paymentResponse = await axios.get(
-                `http://localhost:5000/api/payment/status/${id}`,
+                `https://explore-aditto.ahadalichowdhury.online/api/payment/status/${id}`,
                 {
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -114,7 +114,7 @@ const handleInitiatePayment = async () => {
       const token = localStorage.getItem('token');
       
       const response = await axios.post(
-        `http://localhost:5000/api/payment/initiate/${id}`,
+        `https://explore-aditto.ahadalichowdhury.online/api/payment/initiate/${id}`,
         {},
         {
           headers: {

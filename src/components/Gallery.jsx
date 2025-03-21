@@ -23,7 +23,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchGalleryItems = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/image/galleries');
+        const response = await axios.get('https://explore-aditto.ahadalichowdhury.online/api/image/galleries');
         setGalleryItems(response.data.data);
         setAllGalleryItems(response.data.data)
       } catch (error) {
@@ -55,7 +55,7 @@ const Gallery = () => {
       };
 
       const response = await axios.post(
-        'http://localhost:5000/api/bookings/create',
+        'https://explore-aditto.ahadalichowdhury.online/api/bookings/create',
         bookingPayload,
         { 
           headers: { 
@@ -85,7 +85,7 @@ const Gallery = () => {
       }
 
       const response = await axios.post(
-        `http://localhost:5000/api/image/${selectedItem._id}/review`,
+        `https://explore-aditto.ahadalichowdhury.online/api/image/${selectedItem._id}/review`,
         reviewData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -93,7 +93,7 @@ const Gallery = () => {
       if (response.status === 200) {
         alert('Review submitted successfully!');
         setShowReviewModal(false);
-        const updatedResponse = await axios.get('http://localhost:5000/api/image/galleries');
+        const updatedResponse = await axios.get('https://explore-aditto.ahadalichowdhury.online/api/image/galleries');
         setGalleryItems(updatedResponse.data.data);
       } else {
         alert('Review submission failed. Please try again.');

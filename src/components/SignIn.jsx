@@ -59,7 +59,7 @@ const SignIn = () => {
 
     try {
       let formData = { email, password };
-      const res = await axios.post('http://localhost:5000/api/auth/signin', formData);
+      const res = await axios.post('https://explore-aditto.ahadalichowdhury.online/api/auth/signin', formData);
       localStorage.setItem("token", res?.data?.data?.token);
 
       if (res.data.data.user.isVerified) {

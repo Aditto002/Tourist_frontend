@@ -40,7 +40,7 @@ const handleVerifyOtp = async (e) => {
       setError('');
        console.log("email", email);
        console.log("otp", otp);
-      const res = await axios.post('http://localhost:5000/api/auth/verify',{
+      const res = await axios.post('https://explore-aditto.ahadalichowdhury.online/api/auth/verify',{
         email,
         otp,
       });

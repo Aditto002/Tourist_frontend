@@ -98,7 +98,7 @@ const AddTrips = () => {
       const tripData = { ...newTrip, picture: imageUrl };
 
       const accessToken = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/api/admin/place/create", tripData, {
+      await axios.post("https://explore-aditto.ahadalichowdhury.online/api/admin/place/create", tripData, {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
 

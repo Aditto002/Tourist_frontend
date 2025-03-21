@@ -16,7 +16,7 @@ const UserBookings = () => {
   const fetchBookings = async () => {
     try {
         const accessToken = localStorage.getItem("token");
-      const response = await axios.get('http://localhost:5000/api/bookings/user-bookings',{
+      const response = await axios.get('https://explore-aditto.ahadalichowdhury.online/api/bookings/user-bookings',{
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${accessToken}`
@@ -42,7 +42,7 @@ const UserBookings = () => {
       
       // Call the payment initiation API
       const response = await axios.post(
-        `http://localhost:5000/api/payment/initiate/${bookingId}`,
+        `https://explore-aditto.ahadalichowdhury.online/api/payment/initiate/${bookingId}`,
         {},
         {
           headers: {
@@ -75,7 +75,7 @@ const UserBookings = () => {
       // Fixed axios PUT request structure
       const response = await axios({
         method: 'put',
-        url: `http://localhost:5000/api/bookings/cancel/${bookingId}`,
+        url: `https://explore-aditto.ahadalichowdhury.online/api/bookings/cancel/${bookingId}`,
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${accessToken}`
